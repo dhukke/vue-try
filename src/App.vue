@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import Todos from './components/Todos'
+import Todos from "./components/Todos";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Todos
   },
@@ -17,13 +17,18 @@ export default {
       todos: [
         {
           id: 1,
-          title: 'Test',
+          title: "Test",
           completed: false
+        },
+        {
+          id: 2,
+          title: "Done",
+          completed: true
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

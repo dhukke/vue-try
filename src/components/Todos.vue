@@ -1,19 +1,23 @@
 <template>
   <div class="hello">
-   <div v-bind:key="todo.id" v-for="todo in todos">
-      <h3>{{todo.title}}</h3>
-   </div>
+    <div v-bind:key="todo.id" v-for="todo in todos">
+      <TodoItem v-bind:todo="todo"/>
+    </div>
   </div>
 </template>
 
 <script>
+import TodoItem from "./TodoItem.vue";
+
 export default {
-  name: 'Todos',
-  props: ['todos']
-}
+  name: "Todos",
+  components: {
+    TodoItem
+  },
+  props: ["todos"]
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>
